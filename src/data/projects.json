@@ -1,0 +1,46 @@
+[
+  {
+    "type": "website",
+    "title": "Website GameStore",
+    "description": "Platform e-commerce katalog game dan etalase digital gaming interaktif dengan eksplorasi game tren, filter kategori, dan antarmuka modern yang dinamis.",
+    "category": "Websites",
+    "year": "2025",
+    "role": "Frontend Developer & UI/UX Designer",
+    "image": "./Asset/img/gamestore-preview.png",
+    "link": "https://itslangz.github.io/Website-GameStore/",
+    "media": "https://itslangz.github.io/Website-GameStore/"
+  },
+  {
+    "type": "website",
+    "title": "SI Ekstrakurikuler Mutiara Ilmu",
+    "description": "Platform pendaftaran dan sistem informasi ekstrakurikuler online bagi siswa, mempermudah eksplorasi bakat, registrasi kegiatan, dan manajemen ekskul sekolah.",
+    "category": "Websites",
+    "year": "2025",
+    "role": "Web Developer & UI Designer",
+    "image": "./Asset/img/mutiarailmu-preview.png",
+    "link": "https://itslangz.github.io/SI-Ekstrakurikuler-Mutiara-Ilmu/",
+    "media": "https://itslangz.github.io/SI-Ekstrakurikuler-Mutiara-Ilmu/"
+  },
+  {
+    "type": "website",
+    "title": "Sistem Persediaan Gudang & POS Pagulung",
+    "description": "Aplikasi web manajemen persediaan stok gudang metode FIFO dan Point of Sale (POS) kasir interaktif untuk UMKM Pagulung Tambako Bone.",
+    "category": "Websites",
+    "year": "2026",
+    "role": "UI/UX Designer & Developer",
+    "image": "./Asset/img/pagulung-preview.png",
+    "link": "https://itslangz.github.io/Sistem-Inventory-Pagulung-Tambako/",
+    "media": "https://itslangz.github.io/Sistem-Inventory-Pagulung-Tambako/"
+  },
+  {
+    "type": "website",
+    "title": "BOLATA - Back Office LAman Kita",
+    "description": "Sistem aplikasi web Back Office dan portal integrasi layanan BPS Kabupaten Bone dengan fitur multi-role dashboard, kelola tim, dan tautan inovasi.",
+    "category": "Websites",
+    "year": "2026",
+    "role": "Software Engineer",
+    "image": "./Asset/img/bolata-preview.png",
+    "link": "https://itslangz.github.io/Back-Office-Laman-Kita/user-dashboard.html",
+    "media": "https://itslangz.github.io/Back-Office-Laman-Kita/user-dashboard.html"
+  }
+]
