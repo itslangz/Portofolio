@@ -1,7 +1,4 @@
-# 🎬 GILANG — Cinematic Portfolio (v2.0)
-> **Architect. Code. Deploy. Repeat.**  
-> Portofolio interaktif sinematik berbasis modern web stack untuk Software Engineer & UI/UX Designer.  
-> **Live Site:** https://portofoliolangz.vercel.app/
+
 
 [![React](https://img.shields.io/badge/React-19.2.0-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
 [![Framer Motion](https://img.shields.io/badge/Framer_Motion-12.23.0-FF0055?style=for-the-badge&logo=framer&logoColor=white)](https://www.framer.com/motion/)
