@@ -10,7 +10,8 @@ const required = [
   'Asset/img/gamestore-preview.png',
   'Asset/img/mutiarailmu-preview.png',
   'Asset/img/bolata-preview.png',
-  'Asset/img/pagulung-preview.png'
+  'Asset/img/pagulung-preview.png',
+  'Asset/cv/Gilang_Ryan_Eka_Putra_CV.pdf'
 ];
 
 let allOk = true;

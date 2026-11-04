@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useContext, createContext } from 'react';
 import { createRoot } from 'react-dom/client';
 import { motion, AnimatePresence, MotionConfig, useScroll, useTransform, useSpring, useReducedMotion, useAnimationFrame, useInView } from 'framer-motion';
-import { ArrowUpRight, ArrowDown, ArrowRight, Play, X, Menu, Mail, Phone, MapPin, Instagram, Github, Pause, Search, Plus, Minus, ChevronLeft, ChevronRight, ExternalLink } from 'lucide-react';
+import { ArrowUpRight, ArrowDown, ArrowRight, Play, X, Menu, Mail, Phone, MapPin, Instagram, Github, Pause, Search, Plus, Minus, ChevronLeft, ChevronRight, ExternalLink, Download } from 'lucide-react';
 import archive from './data/projects.json';
 import brands from './data/brands.json';
 import './styles.css';
@@ -82,7 +82,10 @@ function Header({ enabled, onToggle }) {
     <a className="wordmark" href="#home" aria-label="Gilang, beranda">GILANG<span>®</span></a>
     <nav className="desktop-nav" aria-label="Navigasi utama">{[['portfolio', 'Karya'], ['about', 'Tentang'], ['experience', 'Perjalanan'], ['contact', 'Kontak']].map(([id, label]) => <a key={id} href={`#${id}`} className={active === id ? 'active' : ''}>{label}</a>)}</nav>
     <div className="header-actions"><button className="motion-toggle" onClick={onToggle} aria-label={enabled ? 'Jeda animasi' : 'Aktifkan animasi'} aria-pressed={!enabled}>{enabled ? <Pause size={13} /> : <Play size={13} />}<span>Motion {enabled ? 'on' : 'off'}</span></button><a className="header-contact" href="#contact">Let’s talk <ArrowUpRight size={16} /></a><button className="menu-toggle icon-button" onClick={() => setOpen(!open)} aria-expanded={open} aria-controls="mobile-menu" aria-label={open ? 'Tutup menu' : 'Buka menu'}>{open ? <X /> : <Menu />}</button></div>
-    <AnimatePresence>{open && <motion.nav id="mobile-menu" className="mobile-menu" aria-label="Navigasi mobile" initial={{ opacity: 0, y: -12 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -12 }}>{[['home', 'Beranda'], ['portfolio', 'Karya'], ['about', 'Tentang'], ['experience', 'Perjalanan'], ['contact', 'Kontak']].map(([id, label], i) => <a key={id} href={`#${id}`} onClick={() => setOpen(false)}><span>0{i + 1}</span>{label}<ArrowUpRight size={18} /></a>)}</motion.nav>}</AnimatePresence>
+    <AnimatePresence>{open && <motion.nav id="mobile-menu" className="mobile-menu" aria-label="Navigasi mobile" initial={{ opacity: 0, y: -12 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -12 }}>
+      {[['home', 'Beranda'], ['portfolio', 'Karya'], ['about', 'Tentang'], ['experience', 'Perjalanan'], ['contact', 'Kontak']].map(([id, label], i) => <a key={id} href={`#${id}`} onClick={() => setOpen(false)}><span>0{i + 1}</span>{label}<ArrowUpRight size={18} /></a>)}
+      <a href="./Asset/cv/Gilang_Ryan_Eka_Putra_CV.pdf" download="CV_Gilang_Ryan_Eka_Putra.pdf" onClick={() => setOpen(false)}><span>06</span>Unduh CV<Download size={18} /></a>
+    </motion.nav>}</AnimatePresence>
   </header>;
 }
 
@@ -100,7 +103,10 @@ function Hero({ onProject }) {
     <motion.div className="hero-portrait" style={enabled ? { y: portraitY, scale: portraitScale } : {}} initial={enabled ? { opacity: 0 } : false} animate={{ opacity: 1 }} transition={{ duration: 1.2, delay: 0.2 }}><img src="./Asset/img/gueh.png" alt="Gilang Ryan Eka Putra" width="1024" height="1536" fetchPriority="high" /></motion.div>
     <motion.div className="hero-intro" style={enabled ? { y: copyY } : {}} initial={enabled ? { opacity: 0, x: -35 } : false} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.9, delay: 0.35, ease: EASE }}>
       <p className="handwriting">Hello, I’m</p><h1 className="display">GILANG<span>.</span></h1><p className="hero-role">SOFTWARE ENGINEER &<br />UI/UX DESIGNER</p><p className="hero-description">Architect. Code. Deploy. Repeat.<br />Saya mengubah ide menjadi solusi digital yang nyata dan terstruktur.</p>
-      <Magnetic href="#portfolio" className="primary-link">Lihat karya saya <ArrowDown size={17}/></Magnetic>
+      <div className="hero-cta-group">
+        <Magnetic href="#portfolio" className="primary-link">Lihat karya saya <ArrowDown size={17}/></Magnetic>
+        <a href="./Asset/cv/Gilang_Ryan_Eka_Putra_CV.pdf" download="CV_Gilang_Ryan_Eka_Putra.pdf" className="cv-button" aria-label="Unduh CV Gilang Ryan Eka Putra"><Download size={15}/> <span>Unduh CV</span></a>
+      </div>
       <span className="hero-location"><MapPin size={12} /> BONE, INDONESIA</span>
     </motion.div>
     <motion.div className="hero-side" initial={enabled ? { opacity: 0, x: 30 } : false} animate={{ opacity: 1, x: 0 }} transition={{ duration: 1, delay: 0.55, ease: EASE }}>
@@ -348,7 +354,7 @@ function Journey({ onProject }) {
   const [open, setOpen] = useState(0);
   return <section id="experience" className="journey section-wrap">
     <WaveCanvas />
-    <Reveal className="section-heading"><div><span className="eyebrow">03 / THE JOURNEY</span><h2>TERUS BERGERAK. TERUS BERKARYA<span className="accent">.</span></h2></div></Reveal>
+    <Reveal className="section-heading"><div><span className="eyebrow">03 / THE JOURNEY</span><h2>TERUS BERGERAK. TERUS BERKARYA<span className="accent">.</span></h2></div><a className="text-link" href="./Asset/cv/Gilang_Ryan_Eka_Putra_CV.pdf" download="CV_Gilang_Ryan_Eka_Putra.pdf">UNDUH RESUME / CV <Download size={15}/></a></Reveal>
     <div className="journey-grid">
       <div className="experience-list">
         {experiences.map((job, i) => <Reveal className={`experience-row ${open === i ? 'is-open' : ''}`} key={job.title}>
@@ -389,6 +395,7 @@ function Contact({ onProject }) {
         </Magnetic>
       </Reveal>
       <Reveal className="contact-links" delay={0.1}>
+        <a href="./Asset/cv/Gilang_Ryan_Eka_Putra_CV.pdf" download="CV_Gilang_Ryan_Eka_Putra.pdf"><Download/><span><small>CURRICULUM VITAE</small>Unduh CV / Resume (PDF)</span><ArrowUpRight size={16}/></a>
         <a href="mailto:gilangryan.ken@gmail.com"><Mail/><span><small>EMAIL</small>gilangryan.ken@gmail.com</span><ArrowUpRight size={16}/></a>
         <a href="https://github.com/itslangz" target="_blank" rel="noopener noreferrer"><Github/><span><small>GITHUB</small>github.com/itslangz</span><ArrowUpRight size={16}/></a>
         <a href="https://www.instagram.com/laaanggz_/" target="_blank" rel="noopener noreferrer"><Instagram/><span><small>INSTAGRAM</small>@laaanggz_</span><ArrowUpRight size={16}/></a>
