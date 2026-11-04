@@ -79,63 +79,228 @@ Portofolio ini dirancang secara khusus untuk memamerkan proyek rekayasa perangka
 <!-- ============================================================ -->
 
 <div align="center">
-  <table width="100%" style="border: 2px solid #f5c518; border-radius: 12px; background: #11100e; padding: 20px;">
-    <tr>
-      <td>
-
-<h2 align="center">🎴 BLUEPRINT & RESEP PROYEK (PROJECT RECIPE CARD)</h2>
-<p align="center"><em>Panduan lengkap, prompt AI, aset, dan langkah persiapan untuk mereplikasi proyek ini dari awal.</em></p>
 
 ---
 
+## 🎴 BLUEPRINT & RESEP PROYEK (PROJECT RECIPE CARD)
+> **PANDUAN LENGKAP & REPRODUKSI PROYEK 100% IDENTIK**  
+> Bagian card ini menyediakan prompt AI terstruktur (termasuk metode *pull* langsung dari GitHub), potongan kode penting (*critical snippets*), inventaris aset, dan panduan teknis langkah demi langkah.
+
+---
+
+</div>
+
 ### 🤖 1. Prompt untuk Membuat Project Ini
 
-> Salin dan tempel prompt di bawah ini ke AI Coding Assistant (seperti Claude, ChatGPT, Gemini, atau Antigravity) untuk membuat ulang website portofolio sinematik ini:
+Pilih salah satu metode di bawah ini sesuai kebutuhan Anda:
+
+#### ⚡ Opsi A: Prompt Mengambil / Pull Langsung dari GitHub (Rekomendasi Cepat)
+
+Salin prompt di bawah ini ke AI Coding Agent Anda (seperti Antigravity, Claude Code, Cursor, atau ChatGPT) agar agen langsung mengambil kode sumber lengkap dari GitHub:
 
 ```markdown
-Buatkan sebuah website portofolio interaktif bertema "Cinematic Brutalist Dark" untuk seorang Software Engineer & UI/UX Designer bernama Gilang Ryan Eka Putra.
+Tolong lakukan clone dan setup project portofolio interaktif sinematik Gilang langsung dari repositori GitHub resminya:
 
-Spesifikasi & Kebutuhan Teknis:
-1. Tech Stack:
-   - React 19 + ReactDOM
-   - Framer Motion (untuk transisi, layout animations, dan scroll-driven parallax)
-   - Lucide React (untuk ikon antarmuka)
-   - esbuild sebagai bundler super cepat (bundle, minify, sourcemap ke Asset/dist/)
-   - HTML5 Canvas murni untuk animasi visual interaktif
-   - CSS3 modern murni dengan CSS Variables, responsif dari layar smartphone (320px) hingga layar lebar (1800px+)
+- Repository: https://github.com/itslangz/Portofolio.git
+- Branch: main
 
-2. Desain & Estetika:
-   - Background tema gelap (#090909) dengan aksen warna emas/kuning-chartreuse (#f5c518 / #c3dc0f) dan panel (#101010).
-   - Tekstur noise overlay halus di seluruh halaman menggunakan data-uri SVG turbulence.
-   - Tipografi: Anton (heading display besar sinematik), Manrope (teks isi yang bersih), dan Caveat (aksen handwriting aksentuasi).
-
-3. Fitur yang Harus Dibuat:
-   - Sticky Header: Wordmark brand, navigasi desktop & drawer mobile responsif, tombol toggle on/off motion (tersimpan di localStorage), serta quick link kontak.
-   - Reading Progress Bar: Bar penanda scroll di bagian paling atas layar.
-   - Hero Section: Parallax scroll bertingkat, cut-out foto portrait transparan, teks besar "PORTOFOLIO", status badge ketersediaan kolaborasi, lokasi, dan magnetic button.
-   - Interactive 3D Wave Ribbon Canvas: Animasi jaring gelombang pita sinusoidal 3D pada HTML5 Canvas yang merespons tarikan kursor mouse (lerping).
-   - Portfolio Showcase:
-     * Data proyek dimuat dari file JSON terpisah (projects.json).
-     * Filter kategori dan live search bar instan berdasarkan nama dan kata kunci.
-     * Modal dialog interaktif dengan frame "Mockup Browser Chrome" (dots tombol, address bar).
-     * Tab switch di dalam modal: "Live Preview" (iframe interaktif) dan "Screenshot" (gambar preview).
-   - Marquee Brand Strip: Deretan logo mitra yang berjalan otomatis tak terbatas dengan tombol Pause/Play, geser manual, dan opsi "Lihat Semua" ke format grid.
-   - About & Creative Roadmap: Riwayat pendidikan terstruktur, badge keahlian, ikon software/tools yang digunakan, quote sinematik, dan 5 tahap alur kerja rekayasa perangkat lunak (The Idea -> The Plan -> The Craft -> The Polish -> The Deploy).
-   - Experience Accordion: Daftar riwayat kerja yang dapat dibuka/tutup dengan animasi spring Framer Motion.
-   - Contact & WhatsApp Brief Form: Kontak direct (Email, GitHub, Instagram, Phone) dan form ringkasan proyek yang otomatis menyusun format pesan lalu membukanya langsung di WhatsApp Web/App.
-   - Aksesibilitas: Mendukung prefers-reduced-motion, navigasi keyboard (Esc untuk menutup modal, trap focus tab), skip-to-content link, dan teks alt media.
-
-4. Arsitektur File:
-   - index.html (entry HTML)
-   - src/app.jsx (komponen React utama)
-   - src/styles.css (desain styling responsif)
-   - src/data/projects.json (data karya)
-   - src/data/brands.json (data brand partner)
-   - scripts/build.mjs (skrip build esbuild)
-   - scripts/dev.mjs (skrip watch & reload otomatis)
-   - live_preview.js (local static server sederhana tanpa library eksternal)
-   - scripts/check.mjs (skrip verifikasi integritas aset & output build)
+Instruksi Tugas untuk Agent:
+1. Periksa direktori kerja. Jika belum di-clone, jalankan perintah:
+   git clone https://github.com/itslangz/Portofolio.git .
+   (Atau jika sudah di dalam repo lokal, jalankan `git pull origin main` untuk sinkronisasi kode terbaru).
+2. Pasang seluruh dependensi proyek dengan menjalankan:
+   npm install
+3. Kompilasi bundle aplikasi menggunakan esbuild:
+   npm run build
+4. Jalankan script verifikasi kelengkapan aset:
+   npm run check
+5. Aktifkan local development server dengan:
+   npm start
+   (Buka http://localhost:4173 untuk memastikan tampilan dan interaksi berjalan mulus).
+6. Pertahankan seluruh arsitektur yang ada:
+   - React 19 + Framer Motion 12 + Lucide React
+   - Animasi 3D Wave Ribbon Mesh Canvas pada src/app.jsx
+   - Modal interaktif Mockup Browser Chrome dengan Live Preview Iframe & Screenshot toggle
+   - Sistem auto-marquee brand partners dengan kendali jeda/putar
+   - Direct WhatsApp Brief Generator pada form kontak
 ```
+
+---
+
+#### 🛠️ Opsi B: Master Prompt Pembuatan Ulang dari Nol + Potongan Kode Kunci
+
+Jika ingin menginstruksikan AI untuk membangun ulang portofolio ini dari nol namun menghasilkan tampilan, animasi, dan fungsi yang **persis sama**, gunakan prompt komprehensif berikut yang telah dilengkapi potongan kode esensial:
+
+````markdown
+Buatkan sebuah website portofolio interaktif bertema "Cinematic Brutalist Dark" untuk Software Engineer & UI/UX Designer bernama Gilang Ryan Eka Putra.
+
+Website ini harus memiliki hasil yang PERSIS SAMA dengan spesifikasi arsitektur dan potongan kode kunci berikut:
+
+1. SPESIFIKASI UMUM & TEMA DESAIN:
+- Palet Warna: Dark background (#090909), Panel card (#101010), Aksen Gold/Chartreuse (#f5c518 / #c3dc0f), Border line (#292323 / #4a3e1a), Teks putih krem (#f2efeb), Muted text (#a09c9a).
+- Noise Overlay: Gunakan data-uri SVG turbulence berulang sebagai pseudo-element body::after dengan pointer-events: none dan opacity: 0.035.
+- Tipografi: Anton (display brutalist), Manrope (body text), dan Caveat (handwriting cursive).
+- Tech Stack: React 19, Framer Motion 12, Lucide React, esbuild bundler, HTML5 Canvas 2D math.
+
+2. POTONGAN KODE KUNCI (WAJIB DIIMPLEMENTASIKAN PERSIS):
+
+A. Formula Gelombang 3D Ribbon Mesh Canvas (src/app.jsx - WaveCanvas):
+```javascript
+// Konfigurasi Gelombang Jaring
+const config = {
+  lineCount: 45,          // Jumlah garis jaring
+  pointsPerLine: 120,     // Kehalusan lengkungan garis
+  speed: 0.015,           // Kecepatan gerak gelombang
+  color: '195, 220, 15',  // Warna RGB (Kuning-Hijau / Chartreuse)
+  maxOpacity: 0.38        // Ketebalan/transparansi maksimal garis
+};
+
+// Formula Puntiran 3D (Ribbon Mesh) & Tracking Kursor Mouse:
+for (let i = 0; i < config.lineCount; i++) {
+  ctx.beginPath();
+  const normIndex = i / config.lineCount;
+  const alpha = Math.sin(normIndex * Math.PI) * config.maxOpacity;
+  ctx.strokeStyle = `rgba(${config.color}, ${alpha.toFixed(3)})`;
+  ctx.lineWidth = 0.85;
+
+  for (let j = 0; j <= config.pointsPerLine; j++) {
+    const progress = j / config.pointsPerLine;
+    const baseX = progress * width;
+    const baseY = height * 0.88 - (progress * height * 0.48);
+
+    const wave1 = Math.sin(progress * 6.5 - time + i * 0.055) * 115;
+    const wave2 = Math.cos(progress * 3.5 + time * 0.6 + i * 0.085) * 65;
+    const spreadX = Math.cos(progress * 5 - time * 0.8) * (i * 2.2);
+    const spreadY = Math.sin(progress * 4 + i * 0.05) * (i * 3.4);
+    const mousePull = (mouse.y - 0.5) * 70 * Math.sin(progress * Math.PI);
+
+    const x = baseX + spreadX;
+    const y = baseY + wave1 + wave2 + spreadY + mousePull;
+
+    if (j === 0) ctx.moveTo(x, y);
+    else ctx.lineTo(x, y);
+  }
+  ctx.stroke();
+}
+```
+
+B. Modal Interaktif Mockup Browser Chrome (Dual Mode: Live Preview & Screenshot):
+```jsx
+function ProjectDialog({ project, onClose }) {
+  const liveUrl = project.link || project.url || project.media;
+  const [viewMode, setViewMode] = useState(liveUrl ? 'live' : 'still');
+  const [loading, setLoading] = useState(true);
+
+  return (
+    <motion.div className="dialog-backdrop" onClick={e => { if (e.target === e.currentTarget) onClose(); }}>
+      <div className="project-dialog" role="dialog" aria-modal="true">
+        <div className="dialog-heading">
+          <span className="eyebrow">{project.category} {project.year && ` / ${project.year}`}</span>
+          <button onClick={onClose} className="icon-button"><X/></button>
+        </div>
+
+        {liveUrl && (
+          <div className="browser-chrome">
+            <div className="browser-dots">
+              <span className="dot dot-red" />
+              <span className="dot dot-yellow" />
+              <span className="dot dot-green" />
+            </div>
+            <div className="browser-address">
+              <span className="browser-lock">🔒</span>
+              <span className="browser-url">{liveUrl}</span>
+            </div>
+            <div className="browser-actions">
+              {project.image && (
+                <div className="browser-tabs">
+                  <button className={`browser-tab-btn ${viewMode === 'live' ? 'active' : ''}`} onClick={() => setViewMode('live')}>Live Preview</button>
+                  <button className={`browser-tab-btn ${viewMode === 'still' ? 'active' : ''}`} onClick={() => setViewMode('still')}>Screenshot</button>
+                </div>
+              )}
+              <a className="browser-btn" href={liveUrl} target="_blank" rel="noopener noreferrer">Buka Tab Baru <ExternalLink size={12}/></a>
+            </div>
+          </div>
+        )}
+
+        {viewMode === 'live' && liveUrl ? (
+          <div className="dialog-media browser-frame">
+            {loading && <div className="media-loading"><span className="loading-ring"/><p>Memuat live preview website…</p></div>}
+            <iframe src={liveUrl} title={project.title} loading="lazy" onLoad={() => setLoading(false)} sandbox="allow-scripts allow-same-origin allow-forms allow-popups"/>
+          </div>
+        ) : (
+          <div className="dialog-media still">
+            <MediaImage src={project.image} alt={project.title} priority />
+          </div>
+        )}
+
+        <div className="dialog-description">
+          <div>
+            <h2>{project.title}</h2>
+            {project.role && <span className="accent">{project.role}</span>}
+            <p>{project.description}</p>
+          </div>
+          {liveUrl && <a className="solid-button" href={liveUrl} target="_blank" rel="noopener noreferrer">Kunjungi Website <ArrowUpRight size={16}/></a>}
+        </div>
+      </div>
+    </motion.div>
+  );
+}
+```
+
+C. Tombol Fisika Magnetik (Magnetic Button dengan useSpring):
+```jsx
+function Magnetic({ children, className = '', ...props }) {
+  const enabled = useContext(MotionContext);
+  const x = useSpring(0, { stiffness: 220, damping: 20 });
+  const y = useSpring(0, { stiffness: 220, damping: 20 });
+  return (
+    <motion.a className={className} style={{ x, y }} onPointerMove={e => {
+      if (!enabled || e.pointerType !== 'mouse') return;
+      const r = e.currentTarget.getBoundingClientRect();
+      x.set((e.clientX - r.left - r.width / 2) * 0.12);
+      y.set((e.clientY - r.top - r.height / 2) * 0.2);
+    }} onPointerLeave={() => { x.set(0); y.set(0); }} {...props}>
+      {children}
+    </motion.a>
+  );
+}
+```
+
+D. WhatsApp Project Brief Auto-Generator:
+```jsx
+const send = e => {
+  e.preventDefault();
+  const data = new FormData(e.currentTarget);
+  const text = `Halo Gilang, saya ${data.get('name')}.\n\nJenis proyek: ${data.get('type')}\n${data.get('message')}`;
+  window.open(`https://wa.me/6289674547361?text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');
+  setSent(true);
+};
+```
+
+E. Skrip Bundler Cepat esbuild (scripts/build.mjs):
+```javascript
+import { build } from 'esbuild';
+await build({
+  entryPoints: ['src/app.jsx'],
+  bundle: true,
+  minify: true,
+  sourcemap: true,
+  outfile: 'Asset/dist/app.js',
+  loader: { '.jsx': 'jsx' },
+  jsx: 'automatic',
+  target: ['es2020'],
+  define: { 'process.env.NODE_ENV': '"production"' }
+});
+```
+
+3. FITUR UTAMA LAINNYA:
+- Parallax Hero dengan scroll-driven scale & Y offset (`scrollYProgress`).
+- Filter & Realtime Search Bar untuk galeri portofolio (GameStore, Ekskul Mutiara Ilmu, POS Pagulung, BOLATA BPS Bone).
+- Marquee logo partner tak terbatas dengan kontrol Pause/Play dan tombol expand "Lihat Semua" ke format grid.
+- Section About dengan roadmap alur kerja 5 tahap (The Idea, The Plan, The Craft, The Polish, The Deploy), tag keahlian, dan deretan ikon software.
+- Accordion riwayat karier (BPS Bone & ZeeTech).
+- Motion toggle switch yang terhubung dengan `localStorage` dan menghormati `prefers-reduced-motion`.
+````
 
 ---
 
@@ -232,11 +397,6 @@ npm run check
 npm start
 # Server aktif di: http://localhost:4173
 ```
-
-      </td>
-    </tr>
-  </table>
-</div>
 
 <!-- ============================================================ -->
 <!--                 AKHIR PROJECT BLUEPRINT CARD                 -->
@@ -340,3 +500,4 @@ Proyek ini telah dikonfigurasi dan dapat di-*deploy* secara instan ke berbagai p
 <p align="center">
   <sub>Dibuat dengan dedikasi untuk rekayasa perangkat lunak dan desain antarmuka berkualitas tinggi. © 2026 GILANG.</sub>
 </p>
+
