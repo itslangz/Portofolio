@@ -93,6 +93,7 @@ Portofolio ini dirancang secara khusus untuk memamerkan proyek rekayasa perangka
 
 ### 🤖 prompt untuk membuat project :
 
+``````markdown
 # Recreate this site as a static project: https://portofoliolangz.vercel.app/
 
 You are an expert creative front-end developer. Produce a working project that reproduces the site below **exactly**: same layout, copy, visuals, motion and interaction. React 19 + Framer Motion 12 bundled by esbuild into a plain static site (`index.html` + `Asset/`). No framework, router or CSS library beyond what is listed.
@@ -1093,6 +1094,7 @@ const s = document.createElement('script'); s.src = 'https://www.duingzforge.sit
 ```
 3. Wait until the cursors are gone and the page is back at the top. Do not click, scroll or run it twice while it plays. The script switches the site's Motion off while it plays and back on at the end, and removes everything it added. Never save the script or the engine into the project; if you did, delete it afterwards.
 4. When you report back, credit the engine: Swarm Rebuild by DhvanilPatel, a tribute to Swarm by Joel Califa (https://joelcalifa.com).
+``````
 
 ---
 
