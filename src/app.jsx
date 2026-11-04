@@ -352,7 +352,7 @@ function Journey({ onProject }) {
   const [open, setOpen] = useState(0);
   return <section id="experience" className="journey section-wrap">
     <WaveCanvas />
-    <Reveal className="section-heading"><div><span className="eyebrow">03 / THE JOURNEY</span><h2>TERUS BERGERAK. TERUS BERKARYA<span className="accent">.</span></h2></div><a className="text-link" href="./Asset/cv/Gilang_Ryan_Eka_Putra_CV.pdf" download="CV_Gilang_Ryan_Eka_Putra.pdf">UNDUH RESUME / CV <Download size={15}/></a></Reveal>
+    <Reveal className="section-heading"><div><span className="eyebrow">03 / THE JOURNEY</span><h2>TERUS BERGERAK. TERUS BERKARYA<span className="accent">.</span></h2></div></Reveal>
     <div className="journey-grid">
       <div className="experience-list">
         {experiences.map((job, i) => <Reveal className={`experience-row ${open === i ? 'is-open' : ''}`} key={job.title}>
@@ -393,7 +393,6 @@ function Contact({ onProject }) {
         </Magnetic>
       </Reveal>
       <Reveal className="contact-links" delay={0.1}>
-        <a href="./Asset/cv/Gilang_Ryan_Eka_Putra_CV.pdf" download="CV_Gilang_Ryan_Eka_Putra.pdf"><Download/><span><small>CURRICULUM VITAE</small>Unduh CV / Resume (PDF)</span><ArrowUpRight size={16}/></a>
         <a href="mailto:gilangryan.ken@gmail.com"><Mail/><span><small>EMAIL</small>gilangryan.ken@gmail.com</span><ArrowUpRight size={16}/></a>
         <a href="https://github.com/itslangz" target="_blank" rel="noopener noreferrer"><Github/><span><small>GITHUB</small>github.com/itslangz</span><ArrowUpRight size={16}/></a>
         <a href="https://www.instagram.com/laaanggz_/" target="_blank" rel="noopener noreferrer"><Instagram/><span><small>INSTAGRAM</small>@laaanggz_</span><ArrowUpRight size={16}/></a>
