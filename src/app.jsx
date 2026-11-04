@@ -103,14 +103,12 @@ function Hero({ onProject }) {
     <motion.div className="hero-portrait" style={enabled ? { y: portraitY, scale: portraitScale } : {}} initial={enabled ? { opacity: 0 } : false} animate={{ opacity: 1 }} transition={{ duration: 1.2, delay: 0.2 }}><img src="./Asset/img/gueh.png" alt="Gilang Ryan Eka Putra" width="1024" height="1536" fetchPriority="high" /></motion.div>
     <motion.div className="hero-intro" style={enabled ? { y: copyY } : {}} initial={enabled ? { opacity: 0, x: -35 } : false} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.9, delay: 0.35, ease: EASE }}>
       <p className="handwriting">Hello, I’m</p><h1 className="display">GILANG<span>.</span></h1><p className="hero-role">SOFTWARE ENGINEER &<br />UI/UX DESIGNER</p><p className="hero-description">Architect. Code. Deploy. Repeat.<br />Saya mengubah ide menjadi solusi digital yang nyata dan terstruktur.</p>
-      <div className="hero-cta-group">
-        <Magnetic href="#portfolio" className="primary-link">Lihat karya saya <ArrowDown size={17}/></Magnetic>
-        <a href="./Asset/cv/Gilang_Ryan_Eka_Putra_CV.pdf" download="CV_Gilang_Ryan_Eka_Putra.pdf" className="cv-button" aria-label="Unduh CV Gilang Ryan Eka Putra"><Download size={15}/> <span>Unduh CV</span></a>
-      </div>
+      <Magnetic href="#portfolio" className="primary-link">Lihat karya saya <ArrowDown size={17}/></Magnetic>
       <span className="hero-location"><MapPin size={12} /> BONE, INDONESIA</span>
     </motion.div>
     <motion.div className="hero-side" initial={enabled ? { opacity: 0, x: 30 } : false} animate={{ opacity: 1, x: 0 }} transition={{ duration: 1, delay: 0.55, ease: EASE }}>
       <div className="hero-manifesto"><span className="crosshair" aria-hidden="true">✳</span><p>Every code.<br />A different dimension.</p></div>
+      <a className="text-link" href="./Asset/cv/Gilang_Ryan_Eka_Putra_CV.pdf" download="CV_Gilang_Ryan_Eka_Putra.pdf">UNDUH RESUME / CV <Download size={15}/></a>
     </motion.div>
     <div className="hero-bottom"><span className="hero-scroll">SCROLL TO DISCOVER <ArrowDown size={13}/></span><span className="edition">SELECTED WORK / 2024–2026</span></div>
   </section>;
